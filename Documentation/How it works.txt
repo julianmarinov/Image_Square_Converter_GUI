@@ -1,0 +1,9 @@
+The script operates locally on your machine. Here's an overview of how it works:
+
+Interface Initialization: The script uses tkinter to create a graphical user interface (GUI) that allows the user to interact with the program without needing to use command-line commands.
+Model Loading: It uses the whisper module to load a pre-trained model of Whisper, OpenAI's automatic speech recognition system. This model is loaded locally from your machine where the Whisper Python package is installed.
+Audio Processing: When you choose to transcribe an audio file, the script uses the Whisper model to process the audio and generate the transcription. This processing is done locally on your computer, not over the web.
+File Handling: Audio files are selected via a file dialog, and the transcription results are saved to an SRT file on your local disk. The script uses Python's built-in file handling capabilities to read and write files, so no information is sent to or from the web as part of this process.
+Threading: To prevent the GUI from freezing during the transcription process, the script uses Python's threading module to handle the transcription in a separate thread. This is a standard way to keep the user interface responsive while performing a long-running task.
+Error Handling and Status Updates: Throughout the process, the script provides feedback on the status of the transcription and any errors that may occur. This feedback is displayed locally within the GUI.
+So, to summarize, the entire operation of transcribing audio to text is managed locally by the script, and no data is sent out to the web. The Whisper models are designed to work offline once they have been downloaded.

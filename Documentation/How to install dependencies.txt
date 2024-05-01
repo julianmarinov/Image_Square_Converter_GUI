@@ -1,0 +1,48 @@
+Here is a simple guide to set up the environment to run the Audio to SRT Converter script on both Mac and Windows:
+
+### Dependencies List:
+1. Python
+2. Tkinter (usually comes with Python)
+3. Whisper
+4. datetime (comes with Python)
+5. threading (comes with Python)
+6. os (comes with Python)
+
+### Installation Instructions:
+
+#### For Both Mac and Windows:
+
+**Python**:
+- Go to the [official Python website](https://www.python.org/downloads/).
+- Download the latest version of Python for your operating system (Windows or macOS).
+- Run the installer and follow the instructions. Make sure to check the box that says "Add Python to PATH" during installation on Windows.
+
+**Whisper**:
+- Open your terminal (Mac) or command prompt/powershell (Windows).
+- Install Whisper by running the following command:
+  ```
+  pip install git+https://github.com/openai/whisper.git
+  ```
+
+**Tkinter**:
+- Tkinter should already be installed with Python. If it is not, you can install it using the following command:
+  - On Windows, Tkinter is included with the Python installer.
+  - On Mac, you can run:
+    ```
+    brew install python-tk
+    ```
+    You will need Homebrew installed for this command, which you can get from [Homebrew's website](https://brew.sh/).
+
+Once Python and Whisper are installed, your friend should be able to run the script by navigating to the folder containing the script in the terminal (Mac) or command prompt/powershell (Windows) and running the command:
+
+```
+python script_name.py
+```
+Replace `script_name.py` with the actual name of the script file.
+
+If any errors occur relating to missing packages, they can typically be installed using `pip install package_name`, replacing `package_name` with the name of the required package.
+
+### Additional Notes:
+- The `datetime`, `threading`, and `os` modules are part of the Python Standard Library and should not require any additional installation steps.
+- If you are not able to run `pip` commands directly, you might need to use `python -m pip` instead (e.g., `python -m pip install whisper`).
+- If your friend is using an M1/M2 Mac and encounters issues, they may need to run `arch -x86_64 /bin/bash` before the pip install command to switch to the x86 architecture in the terminal, as some packages may not yet have ARM support.
