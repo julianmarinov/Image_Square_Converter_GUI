@@ -28,7 +28,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='main',
+    name='Image Square Converter',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -44,7 +44,7 @@ exe = EXE(
 )
 app = BUNDLE(
     exe,
-    name='main.app',
+    name='Image Square Converter.app',
     icon=None,
-    bundle_identifier=None,
+    bundle_identifier='com.julianmarinov.imagesquareconverter',
 )
