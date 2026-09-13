@@ -26,9 +26,15 @@ It's made for e-commerce product photos, marketplace listings and anywhere else 
 
 ## Download
 
-A ready-to-run macOS app is attached to the latest release on the [Releases page](https://github.com/julianmarinov/Image_Square_Converter_GUI/releases). Unzip it and move **Image Square Converter.app** to Applications.
+A ready-to-run app for **Macs with Apple Silicon** (M1 or newer) is attached to the latest release on the [Releases page](https://github.com/julianmarinov/Image_Square_Converter_GUI/releases). Unzip it and move **Image Square Converter.app** to Applications.
 
-The app isn't signed with an Apple Developer ID, so macOS will warn you the first time. Right-click the app, choose **Open**, then confirm.
+The app isn't signed with an Apple Developer ID, so macOS blocks it the first time you open it. To allow it:
+
+1. Try to open the app, then close the warning.
+2. Go to **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next to the message about Image Square Converter.
+3. Confirm with **Open Anyway** again.
+
+On an Intel Mac, Windows or Linux, [run it from source](#run-from-source) or [build the app yourself](#build-the-macos-app).
 
 ## Run from source
 
@@ -52,12 +58,14 @@ On Windows, use `venv\Scripts\pip` and `venv\Scripts\python` instead.
 
 ## Build the macOS app
 
+To make a double-clickable app, for example on an Intel Mac, set things up as in [Run from source](#run-from-source) and then run:
+
 ```bash
 venv/bin/pip install pyinstaller
 venv/bin/pyinstaller main.spec
 ```
 
-The app is created at `dist/Image Square Converter.app`. It is built for the architecture of the Mac you build it on.
+You'll find **Image Square Converter.app** in the `dist` folder. It runs on the same type of Mac it was built on: Intel or Apple Silicon.
 
 ## Development
 
