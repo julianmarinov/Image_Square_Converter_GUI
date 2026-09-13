@@ -10,6 +10,18 @@ Support for multiple image formats: .png, .jpg, .jpeg, and .gif.
 Progress bar to track the conversion process in real-time.
 Integrated directory browsers for selecting input and output paths.
 Error handling and user feedback for improved user experience.
+Subfolders are mirrored in the export folder, so files with the same name never overwrite each other.
+Transparent areas are filled with white, and phone photos keep their correct orientation.
+Broken or unreadable files are skipped and listed in a summary instead of stopping the whole batch.
+The window stays responsive during large conversions.
+
+Installation:
+pip install -r requirements.txt
+python main.py
+
+Running tests:
+pip install pytest
+pytest
 
 Usage:
 Launch the script.
